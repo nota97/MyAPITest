@@ -189,9 +189,9 @@ function showOutput(id, name) {
 
 <div class='heading'>
 <h1>Test Report</h1>
-<p class='attribute'><strong>Start Time:</strong> 2021-07-29 14:47:34</p>
-<p class='attribute'><strong>Duration:</strong> 0:00:00.125887</p>
-<p class='attribute'><strong>Status:</strong> Failure 2</p>
+<p class='attribute'><strong>Start Time:</strong> 2021-07-29 17:40:48</p>
+<p class='attribute'><strong>Duration:</strong> 0:00:00.075480</p>
+<p class='attribute'><strong>Status:</strong> Pass 1 Failure 2</p>
 
 <p class='description'>Test Description</p>
 </div>
@@ -223,11 +223,11 @@ function showOutput(id, name) {
 
 <tr class='failClass'>
     <td>test_api.TestAPIfunc</td>
+    <td>3</td>
+    <td>1</td>
     <td>2</td>
     <td>0</td>
-    <td>2</td>
-    <td>0</td>
-    <td><a href="javascript:showClassDetail('c1',2)">Detail</a></td>
+    <td><a href="javascript:showClassDetail('c1',3)">Detail</a></td>
 </tr>
 
 <tr id='ft1.1' class='none'>
@@ -248,13 +248,13 @@ function showOutput(id, name) {
 ft1.1: Traceback (most recent call last):
   File "D:\PycharmProjects\myprojectapi\venv\lib\site-packages\parameterized\parameterized.py", line 533, in standalone_func
     return func(*(a + p.args), **p.kwargs)
-  File "D:\PycharmProjects\myprojectapi\test_api.py", line 38, in test_case01
+  File "D:\PycharmProjects\myprojectapi\test_api.py", line 39, in test_case01
     self.assertEqual(r["status"], 200)
 AssertionError: 400 != 200
 Traceback (most recent call last):
   File "D:\PycharmProjects\myprojectapi\venv\lib\site-packages\parameterized\parameterized.py", line 533, in standalone_func
     return func(*(a + p.args), **p.kwargs)
-  File "D:\PycharmProjects\myprojectapi\test_api.py", line 38, in test_case01
+  File "D:\PycharmProjects\myprojectapi\test_api.py", line 39, in test_case01
     self.assertEqual(r["status"], 200)
 AssertionError: 400 != 200
 
@@ -284,13 +284,13 @@ AssertionError: 400 != 200
 ft1.2: Traceback (most recent call last):
   File "D:\PycharmProjects\myprojectapi\venv\lib\site-packages\parameterized\parameterized.py", line 533, in standalone_func
     return func(*(a + p.args), **p.kwargs)
-  File "D:\PycharmProjects\myprojectapi\test_api.py", line 38, in test_case01
+  File "D:\PycharmProjects\myprojectapi\test_api.py", line 39, in test_case01
     self.assertEqual(r["status"], 200)
 AssertionError: 400 != 200
 Traceback (most recent call last):
   File "D:\PycharmProjects\myprojectapi\venv\lib\site-packages\parameterized\parameterized.py", line 533, in standalone_func
     return func(*(a + p.args), **p.kwargs)
-  File "D:\PycharmProjects\myprojectapi\test_api.py", line 38, in test_case01
+  File "D:\PycharmProjects\myprojectapi\test_api.py", line 39, in test_case01
     self.assertEqual(r["status"], 200)
 AssertionError: 400 != 200
 
@@ -302,10 +302,34 @@ AssertionError: 400 != 200
     </td>
 </tr>
 
+<tr id='pt1.3' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_case01_2_http_192_168_1_6_31046_hermes_device_loginTerminalInfo_identifier_</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.3')" >
+        pass</a>
+
+    <div id='div_pt1.3' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt1.3').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt1.3: 
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
 <tr id='total_row'>
     <td>Total</td>
-    <td>2</td>
-    <td>0</td>
+    <td>3</td>
+    <td>1</td>
     <td>2</td>
     <td>0</td>
     <td>&nbsp;</td>

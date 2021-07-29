@@ -17,14 +17,21 @@ class APIRequest():
         return r
 
     def send_get(self,url,body):
-        return 0
+        r = None
+        try:
+            res = requests.get(url=url, params=eval(body)).json()
+        except Exception as e:
+            raise Exception("error:接口无法连接")
+        else:
+            r = json.dumps(res, ensure_ascii=False, sort_keys=True, indent=2)
+        return r
 
     def GetRequests(self, url, method, headers, body):
         result=None
         if method == "post":
-            result=self.send_post(url,headers,body)
+            result = self.send_post(url,headers,body)
         elif method == "get":
-            result=self.send_get(url,body)
+            result = self.send_get(url,body)
         else:
             print("method错误!!!")
         return result

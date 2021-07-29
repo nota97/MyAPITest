@@ -19,7 +19,7 @@ class readExcel():
             for j in range(sheet.max_column):
                 lst.append(sheet.cell(i + 2, j + 1).value)
             cls.append(lst)
-        #print(cls)
+        print(cls)
         return cls
 
     @classmethod

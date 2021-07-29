@@ -31,12 +31,14 @@ class TestAPIfunc(unittest.TestCase):
         #                   headers={'Content-Type':'application/x-www-form-urlencoded'}).json()
         # r = json.dumps(res, ensure_ascii=False, sort_keys=True, indent=2)
         # r = json.loads(r)
+        # data = eval(data)
         r = APIRequest().GetRequests(url, method, headers, data)
         # r = APIRequest().GetRequests(self.url, self.method, self.headers, self.data)
         r = json.loads(r)
         resultdata.append(str(r))
         self.assertEqual(r["status"], 200)
-        # print(resultdata)
+        print(resultdata)
+
 
 if __name__ == '__main__':
     unittest.main(verbosity=2)
