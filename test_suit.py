@@ -1,7 +1,6 @@
 import unittest
 import os
 import common.HTMLTestRunner as HTMLTestRunner
-from test_api import TestAPIfunc
 import test_api
 from readExcel import readExcel
 
@@ -21,9 +20,9 @@ if __name__ == '__main__':
     # test=TestAPIfunc("test_case01")
     # suite.addTest(test)
     fp = open(resultPath, 'wb')   #打开result/20181108/report.html测试报告文件，如果不存在就创建
-    # runner = HTMLTestRunner.HTMLTestRunner(stream=fp, title='Test Report', description='Test Description')
-    
-    runner = unittest.TextTestRunner(verbosity=2)
+    runner = HTMLTestRunner.HTMLTestRunner(stream=fp, title='Test Report', description='Test Description')
+
+    # runner = unittest.TextTestRunner(verbosity=2)
     runner.run(suite)
     data = test_api.resultdata
     readExcel.addresultintoExcel("APItestcase.xlsx", "Sheet1", data)

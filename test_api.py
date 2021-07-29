@@ -6,7 +6,7 @@ import paramunittest
 import parameterized
 from APIRequest import APIRequest
 
-api_list = readExcel.readExcel().getExcelcase("APItestcase.xlsx","Sheet1")
+api_list = readExcel.readExcel().getExcelcase("APItestcase.xlsx", "Sheet1")
 resultdata = []
 
 

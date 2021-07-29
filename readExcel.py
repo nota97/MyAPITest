@@ -2,7 +2,8 @@ import os
 import openpyxl
 
 #读取项目路径
-path = os.path.split(os.path.realpath(__file__))[0]
+rootpath = os.path.split(os.path.realpath(__file__))[0]
+path = os.path.join(rootpath, 'testdata')
 
 class readExcel():
     def getExcelcase(self,filename,sheetname):
@@ -31,12 +32,12 @@ class readExcel():
         for i in range (rows-1):
             sheet.cell(i+2, col+1).value= data[i]
             print(sheet.cell(i+2, col+1).value)
-        file.save(path+"/result/"+filename)
+        file.save(rootpath+"/result/"+filename)
         return 0
 
 if __name__ == '__main__':
     a = ["pass","false"]
-    readExcel().getExcelcase("APItestcase.xlsx", "Sheet1")
-    readExcel().addresultintoExcel("APItestcase.xlsx", "Sheet1", a)
+    readExcel().getExcelcase("testdata/APItestcase.xlsx", "Sheet1")
+    readExcel().addresultintoExcel("testdata/APItestcase.xlsx", "Sheet1", a)
 
 
