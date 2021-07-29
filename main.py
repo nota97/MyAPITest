@@ -3,6 +3,7 @@
 # Press Shift+F10 to execute it or replace it with your code.
 # Press Double Shift to search everywhere for classes, files, tool windows, actions, and settings.
 import os
+import testdata.ExcelConfig as ExcelConfig
 import openpyxl
 
 #读取项目路径
@@ -18,5 +19,6 @@ def print_hi(name):
 if __name__ == '__main__':
     print_hi('PyCharm')
     print(os.path.join(path,'data'))
+    print(ExcelConfig.ExcelName,ExcelConfig.ExcelSheet)
 
 # See PyCharm help at https://www.jetbrains.com/help/pycharm/

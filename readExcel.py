@@ -37,7 +37,7 @@ class readExcel():
 
 if __name__ == '__main__':
     a = ["pass","false"]
-    readExcel().getExcelcase("testdata/APItestcase.xlsx", "Sheet1")
-    readExcel().addresultintoExcel("testdata/APItestcase.xlsx", "Sheet1", a)
+    readExcel().getExcelcase("APItestcase.xlsx", "Sheet1")
+    readExcel().addresultintoExcel("APItestcase.xlsx", "Sheet1", a)
 
 

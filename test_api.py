@@ -5,8 +5,9 @@ import readExcel
 import paramunittest
 import parameterized
 from APIRequest import APIRequest
+import testdata.ExcelConfig as ExcelConfig
 
-api_list = readExcel.readExcel().getExcelcase("APItestcase.xlsx", "Sheet1")
+api_list = readExcel.readExcel().getExcelcase(ExcelConfig.ExcelName, ExcelConfig.ExcelSheet)
 resultdata = []
 
 
@@ -34,7 +35,7 @@ class TestAPIfunc(unittest.TestCase):
         # r = APIRequest().GetRequests(self.url, self.method, self.headers, self.data)
         r = json.loads(r)
         resultdata.append(str(r))
-        self.assertEqual(r["status"], 400)
+        self.assertEqual(r["status"], 200)
         # print(resultdata)
 
 if __name__ == '__main__':

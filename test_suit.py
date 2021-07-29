@@ -3,6 +3,7 @@ import os
 import common.HTMLTestRunner as HTMLTestRunner
 import test_api
 from readExcel import readExcel
+import testdata.ExcelConfig as ExcelConfig
 
 
 path = os.path.split(os.path.realpath(__file__))[0]
@@ -25,4 +26,4 @@ if __name__ == '__main__':
     # runner = unittest.TextTestRunner(verbosity=2)
     runner.run(suite)
     data = test_api.resultdata
-    readExcel.addresultintoExcel("APItestcase.xlsx", "Sheet1", data)
+    readExcel.addresultintoExcel(ExcelConfig.ExcelName, ExcelConfig.ExcelSheet, data)

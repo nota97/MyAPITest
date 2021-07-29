@@ -30,7 +30,7 @@ class APIRequest():
         return result
 
 if __name__ == '__main__':
-    lst=readExcel().getExcelcase("testdata/APItestcase.xlsx", "Sheet1")
+    lst=readExcel().getExcelcase("APItestcase.xlsx", "Sheet1")
     for i in lst:
         result=APIRequest().GetRequests(i[0],i[1],i[2],i[3])
         print(result)
