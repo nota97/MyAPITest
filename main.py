@@ -23,13 +23,16 @@ if __name__ == '__main__':
     print(os.path.join(path,'data'))
     print(ExcelConfig.ExcelName,ExcelConfig.ExcelSheet)
     url="http://192.168.1.6:31046/hermes/device/loginTerminalInfo/{identifier}"
-    data={'identifier':'0ecc5f6d41b2311fca1230b62ee78f0a_1','username':'xxxx'}
+    data="{'identifier':'0ecc5f6d41b2311fca1230b62ee78f0a_1','username':'xxxx'}"
     print(type(data))
     res = requests.get(url=url,
                        params=data).json()
 
     r = json.dumps(res, ensure_ascii=False, sort_keys=True, indent=2)
-
+    if (type(data) is not dict):
+        print("11111")
+    else:
+        print("22222222")
     # xpath = os.path.join(path+'/testdata', ExcelConfig.ExcelName)
     # file = openpyxl.load_workbook(xpath)
     # sheet = file[ExcelConfig.ExcelSheet]

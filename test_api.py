@@ -37,7 +37,7 @@ class TestAPIfunc(unittest.TestCase):
         r = json.loads(r)
         resultdata.append(str(r))
         self.assertEqual(r["status"], 200)
-        print(resultdata)
+        # print(resultdata)
 
 
 if __name__ == '__main__':

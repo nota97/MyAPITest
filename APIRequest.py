@@ -19,7 +19,10 @@ class APIRequest():
     def send_get(self,url,body):
         r = None
         try:
-            res = requests.get(url=url, params=eval(body)).json()
+            if(type(body) is not dict):
+                res = requests.get(url=url, params=json.loads(body.replace("'", "\""))).json()
+            else:
+                res = requests.get(url=url, params=body).json()
         except Exception as e:
             raise Exception("error:接口无法连接")
         else:
