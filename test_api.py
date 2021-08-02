@@ -26,7 +26,7 @@ class TestAPIfunc(unittest.TestCase):
         print("do something after test.Clean up")
 
     @parameterized.parameterized.expand(api_list)
-    def test_case01(self,url, method, headers, data):
+    def test_case01(self,url, method, headers, data, expect):
         # res=requests.post(url='http://192.168.1.21/justsy/rpc/msgPushByUser',data={'userNames':'yiying.zh','content':'hhhhh'},
         #                   headers={'Content-Type':'application/x-www-form-urlencoded'}).json()
         # r = json.dumps(res, ensure_ascii=False, sort_keys=True, indent=2)
@@ -35,10 +35,17 @@ class TestAPIfunc(unittest.TestCase):
         r = APIRequest().GetRequests(url, method, headers, data)
         # r = APIRequest().GetRequests(self.url, self.method, self.headers, self.data)
         r = json.loads(r)
-        resultdata.append(str(r))
-        self.assertEqual(r["status"], 200)
-        # print(resultdata)
+        res = str(r)
+        try:
+            self.assertIn(str(expect), res)
+            resultdata.append("Pass")
+        except AssertionError as e:
+            resultdata.append(res)
+            raise AssertionError
 
+        # self.assertEqual(r["status"], 200)
+        print(resultdata)
+        # self.assertIn(str(expect), res)
 
 if __name__ == '__main__':
     unittest.main(verbosity=2)

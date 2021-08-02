@@ -1,5 +1,6 @@
 import os
 import openpyxl
+from openpyxl.styles import Font,colors
 
 #读取项目路径
 rootpath = os.path.split(os.path.realpath(__file__))[0]
@@ -29,15 +30,20 @@ class readExcel():
         sheet = file[sheetname]
         rows = sheet.max_row
         col = sheet.max_column
-        for i in range (rows-1):
-            sheet.cell(i+2, col+1).value= data[i]
-            print(sheet.cell(i+2, col+1).value)
+        sheet.cell(1, col+1).value = "result"
+        for i in range(rows-1):
+            if data[i] == "Pass":
+                sheet.cell(i+2,col+1).font = Font(color="00FF00")
+                sheet.cell(i+2, col+1).value = data[i]
+            else:
+                sheet.cell(i + 2, col + 1).value = data[i]
+            # print(sheet.cell(i+2, col+1).value)
         file.save(rootpath+"/result/"+filename)
         return 0
 
 if __name__ == '__main__':
     a = ["pass","false"]
-    readExcel().getExcelcase("APItestcase.xlsx", "Sheet1")
+    readExcel().getExcelcase("APItestcase1.xlsx", "Sheet1")
     # readExcel().addresultintoExcel("APItestcase.xlsx", "Sheet1", a)
 
 
