@@ -11,6 +11,7 @@ class APIRequest():
                                 data=json.loads(body.replace("'", "\"")),
                                 headers=json.loads(headers.replace("'", "\""))).json()
         except Exception as e:
+            res = {'error': '接口无法连接'}
             raise Exception("error：接口无法连接")
         else:
             r = json.dumps(res, ensure_ascii=False, sort_keys=True, indent=2)
@@ -24,6 +25,7 @@ class APIRequest():
             else:
                 res = requests.get(url=url, params=body).json()
         except Exception as e:
+            res = {'error': '接口无法连接'}
             raise Exception("error:接口无法连接")
         else:
             r = json.dumps(res, ensure_ascii=False, sort_keys=True, indent=2)

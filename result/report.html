@@ -189,9 +189,9 @@ function showOutput(id, name) {
 
 <div class='heading'>
 <h1>Test Report</h1>
-<p class='attribute'><strong>Start Time:</strong> 2021-08-02 16:08:35</p>
-<p class='attribute'><strong>Duration:</strong> 0:00:00.096377</p>
-<p class='attribute'><strong>Status:</strong> Pass 3 Failure 1</p>
+<p class='attribute'><strong>Start Time:</strong> 2021-08-09 15:28:20</p>
+<p class='attribute'><strong>Duration:</strong> 0:00:00.579904</p>
+<p class='attribute'><strong>Status:</strong> Pass 1 Failure 3</p>
 
 <p class='description'>Test Description</p>
 </div>
@@ -224,28 +224,58 @@ function showOutput(id, name) {
 <tr class='failClass'>
     <td>test_api.TestAPIfunc</td>
     <td>4</td>
-    <td>3</td>
     <td>1</td>
+    <td>3</td>
     <td>0</td>
     <td><a href="javascript:showClassDetail('c1',4)">Detail</a></td>
 </tr>
 
-<tr id='pt1.1' class='hiddenRow'>
-    <td class='none'><div class='testcase'>test_case01_0_http_192_168_1_21_justsy_rpc_msgPushByUser</div></td>
+<tr id='ft1.1' class='none'>
+    <td class='failCase'><div class='testcase'>test_case01_0_http_192_168_1_21_justsy_rpc_msgPushByUser</div></td>
     <td colspan='5' align='center'>
 
     <!--css div popup start-->
-    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.1')" >
-        pass</a>
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft1.1')" >
+        fail</a>
 
-    <div id='div_pt1.1' class="popup_window">
+    <div id='div_ft1.1' class="popup_window">
         <div style='text-align: right; color:red;cursor:pointer'>
-        <a onfocus='this.blur();' onclick="document.getElementById('div_pt1.1').style.display = 'none' " >
+        <a onfocus='this.blur();' onclick="document.getElementById('div_ft1.1').style.display = 'none' " >
            [x]</a>
         </div>
         <pre>
         
-pt1.1: 
+ft1.1: Traceback (most recent call last):
+  File "D:\PycharmProjects\myprojectapi\test_api.py", line 40, in test_case01
+    self.assertIn(str(expect), res) #判断期望是否在接口返回信息中
+  File "C:\Users\Xuxb\AppData\Local\Programs\Python\Python39\lib\unittest\case.py", line 1098, in assertIn
+    self.fail(self._formatMessage(msg, standardMsg))
+AssertionError: "{'content': [], 'msgs': {'msg.user.nodevice.exists': '用户无设备'}, 'status': 400, 'success': False, 'totalCount': 0}" not found in "{'content': [], 'msgs': {}, 'status': 200, 'success': True, 'totalCount': 0}"
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\PycharmProjects\myprojectapi\venv\lib\site-packages\parameterized\parameterized.py", line 533, in standalone_func
+    return func(*(a + p.args), **p.kwargs)
+  File "D:\PycharmProjects\myprojectapi\test_api.py", line 44, in test_case01
+    raise AssertionError
+AssertionError
+Traceback (most recent call last):
+  File "D:\PycharmProjects\myprojectapi\test_api.py", line 40, in test_case01
+    self.assertIn(str(expect), res) #判断期望是否在接口返回信息中
+  File "C:\Users\Xuxb\AppData\Local\Programs\Python\Python39\lib\unittest\case.py", line 1098, in assertIn
+    self.fail(self._formatMessage(msg, standardMsg))
+AssertionError: "{'content': [], 'msgs': {'msg.user.nodevice.exists': '用户无设备'}, 'status': 400, 'success': False, 'totalCount': 0}" not found in "{'content': [], 'msgs': {}, 'status': 200, 'success': True, 'totalCount': 0}"
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\PycharmProjects\myprojectapi\venv\lib\site-packages\parameterized\parameterized.py", line 533, in standalone_func
+    return func(*(a + p.args), **p.kwargs)
+  File "D:\PycharmProjects\myprojectapi\test_api.py", line 44, in test_case01
+    raise AssertionError
+AssertionError
+
 
         </pre>
     </div>
@@ -278,22 +308,52 @@ pt1.2:
     </td>
 </tr>
 
-<tr id='pt1.3' class='hiddenRow'>
-    <td class='none'><div class='testcase'>test_case01_2_http_192_168_1_6_31046_hermes_device_loginTerminalInfo_identifier_</div></td>
+<tr id='ft1.3' class='none'>
+    <td class='failCase'><div class='testcase'>test_case01_2_http_192_168_1_6_31046_hermes_device_loginTerminalInfo_identifier_</div></td>
     <td colspan='5' align='center'>
 
     <!--css div popup start-->
-    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.3')" >
-        pass</a>
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft1.3')" >
+        fail</a>
 
-    <div id='div_pt1.3' class="popup_window">
+    <div id='div_ft1.3' class="popup_window">
         <div style='text-align: right; color:red;cursor:pointer'>
-        <a onfocus='this.blur();' onclick="document.getElementById('div_pt1.3').style.display = 'none' " >
+        <a onfocus='this.blur();' onclick="document.getElementById('div_ft1.3').style.display = 'none' " >
            [x]</a>
         </div>
         <pre>
         
-pt1.3: 
+ft1.3: Traceback (most recent call last):
+  File "D:\PycharmProjects\myprojectapi\test_api.py", line 40, in test_case01
+    self.assertIn(str(expect), res) #判断期望是否在接口返回信息中
+  File "C:\Users\Xuxb\AppData\Local\Programs\Python\Python39\lib\unittest\case.py", line 1098, in assertIn
+    self.fail(self._formatMessage(msg, standardMsg))
+AssertionError: "{'content': {'bridges': [], 'departName': 'xxb', 'deviceId': 78196, 'endTime': '23:00', 'isPublic': 'Y', 'issueBody': 'xxb', 'repeatType': '1', 'startTime': '00:00', 'terminalName': '康佳K5', 'terminalType': '康佳K5', 'usageType': '0'}, 'msgs': '', 'status': 200}" not found in "{'content': '', 'msgs': [{'args': '', 'code': 'E.LOGIN.TERMINAL.NOT.EXISTS'}], 'status': 400}"
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\PycharmProjects\myprojectapi\venv\lib\site-packages\parameterized\parameterized.py", line 533, in standalone_func
+    return func(*(a + p.args), **p.kwargs)
+  File "D:\PycharmProjects\myprojectapi\test_api.py", line 44, in test_case01
+    raise AssertionError
+AssertionError
+Traceback (most recent call last):
+  File "D:\PycharmProjects\myprojectapi\test_api.py", line 40, in test_case01
+    self.assertIn(str(expect), res) #判断期望是否在接口返回信息中
+  File "C:\Users\Xuxb\AppData\Local\Programs\Python\Python39\lib\unittest\case.py", line 1098, in assertIn
+    self.fail(self._formatMessage(msg, standardMsg))
+AssertionError: "{'content': {'bridges': [], 'departName': 'xxb', 'deviceId': 78196, 'endTime': '23:00', 'isPublic': 'Y', 'issueBody': 'xxb', 'repeatType': '1', 'startTime': '00:00', 'terminalName': '康佳K5', 'terminalType': '康佳K5', 'usageType': '0'}, 'msgs': '', 'status': 200}" not found in "{'content': '', 'msgs': [{'args': '', 'code': 'E.LOGIN.TERMINAL.NOT.EXISTS'}], 'status': 400}"
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\PycharmProjects\myprojectapi\venv\lib\site-packages\parameterized\parameterized.py", line 533, in standalone_func
+    return func(*(a + p.args), **p.kwargs)
+  File "D:\PycharmProjects\myprojectapi\test_api.py", line 44, in test_case01
+    raise AssertionError
+AssertionError
+
 
         </pre>
     </div>
@@ -319,7 +379,7 @@ pt1.3:
         
 ft1.4: Traceback (most recent call last):
   File "D:\PycharmProjects\myprojectapi\test_api.py", line 40, in test_case01
-    self.assertIn(str(expect), res)
+    self.assertIn(str(expect), res) #判断期望是否在接口返回信息中
   File "C:\Users\Xuxb\AppData\Local\Programs\Python\Python39\lib\unittest\case.py", line 1098, in assertIn
     self.fail(self._formatMessage(msg, standardMsg))
 AssertionError: 'E.NETWORK.CONFIG.DEPARTPATH.NOTEXIST' not found in "{'content': '', 'msgs': [{'args': '', 'code': 'E.NETWORK.CONFIG.DEVICE.NOTEXIST'}], 'status': 400}"
@@ -334,7 +394,7 @@ Traceback (most recent call last):
 AssertionError
 Traceback (most recent call last):
   File "D:\PycharmProjects\myprojectapi\test_api.py", line 40, in test_case01
-    self.assertIn(str(expect), res)
+    self.assertIn(str(expect), res) #判断期望是否在接口返回信息中
   File "C:\Users\Xuxb\AppData\Local\Programs\Python\Python39\lib\unittest\case.py", line 1098, in assertIn
     self.fail(self._formatMessage(msg, standardMsg))
 AssertionError: 'E.NETWORK.CONFIG.DEPARTPATH.NOTEXIST' not found in "{'content': '', 'msgs': [{'args': '', 'code': 'E.NETWORK.CONFIG.DEVICE.NOTEXIST'}], 'status': 400}"
@@ -359,8 +419,8 @@ AssertionError
 <tr id='total_row'>
     <td>Total</td>
     <td>4</td>
-    <td>3</td>
     <td>1</td>
+    <td>3</td>
     <td>0</td>
     <td>&nbsp;</td>
 </tr>

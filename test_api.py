@@ -37,14 +37,14 @@ class TestAPIfunc(unittest.TestCase):
         r = json.loads(r)
         res = str(r)
         try:
-            self.assertIn(str(expect), res)
+            self.assertIn(str(expect), res) #判断期望是否在接口返回信息中
             resultdata.append("Pass")
         except AssertionError as e:
             resultdata.append(res)
             raise AssertionError
 
         # self.assertEqual(r["status"], 200)
-        print(resultdata)
+        # print(resultdata)
         # self.assertIn(str(expect), res)
 
 if __name__ == '__main__':
