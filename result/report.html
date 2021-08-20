@@ -189,9 +189,9 @@ function showOutput(id, name) {
 
 <div class='heading'>
 <h1>Test Report</h1>
-<p class='attribute'><strong>Start Time:</strong> 2021-08-09 15:28:20</p>
-<p class='attribute'><strong>Duration:</strong> 0:00:00.579904</p>
-<p class='attribute'><strong>Status:</strong> Pass 1 Failure 3</p>
+<p class='attribute'><strong>Start Time:</strong> 2021-08-17 14:11:00</p>
+<p class='attribute'><strong>Duration:</strong> 0:00:00.172899</p>
+<p class='attribute'><strong>Status:</strong> Pass 6</p>
 
 <p class='description'>Test Description</p>
 </div>
@@ -221,61 +221,31 @@ function showOutput(id, name) {
     <td>View</td>
 </tr>
 
-<tr class='failClass'>
+<tr class='passClass'>
     <td>test_api.TestAPIfunc</td>
-    <td>4</td>
-    <td>1</td>
-    <td>3</td>
+    <td>6</td>
+    <td>6</td>
     <td>0</td>
-    <td><a href="javascript:showClassDetail('c1',4)">Detail</a></td>
+    <td>0</td>
+    <td><a href="javascript:showClassDetail('c1',6)">Detail</a></td>
 </tr>
 
-<tr id='ft1.1' class='none'>
-    <td class='failCase'><div class='testcase'>test_case01_0_http_192_168_1_21_justsy_rpc_msgPushByUser</div></td>
+<tr id='pt1.1' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_case01_0_http_bjga_chinamdm_com_12019_hermes_device_updateDeviceRootAndOut</div></td>
     <td colspan='5' align='center'>
 
     <!--css div popup start-->
-    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft1.1')" >
-        fail</a>
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.1')" >
+        pass</a>
 
-    <div id='div_ft1.1' class="popup_window">
+    <div id='div_pt1.1' class="popup_window">
         <div style='text-align: right; color:red;cursor:pointer'>
-        <a onfocus='this.blur();' onclick="document.getElementById('div_ft1.1').style.display = 'none' " >
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt1.1').style.display = 'none' " >
            [x]</a>
         </div>
         <pre>
         
-ft1.1: Traceback (most recent call last):
-  File "D:\PycharmProjects\myprojectapi\test_api.py", line 40, in test_case01
-    self.assertIn(str(expect), res) #判断期望是否在接口返回信息中
-  File "C:\Users\Xuxb\AppData\Local\Programs\Python\Python39\lib\unittest\case.py", line 1098, in assertIn
-    self.fail(self._formatMessage(msg, standardMsg))
-AssertionError: "{'content': [], 'msgs': {'msg.user.nodevice.exists': '用户无设备'}, 'status': 400, 'success': False, 'totalCount': 0}" not found in "{'content': [], 'msgs': {}, 'status': 200, 'success': True, 'totalCount': 0}"
-
-During handling of the above exception, another exception occurred:
-
-Traceback (most recent call last):
-  File "D:\PycharmProjects\myprojectapi\venv\lib\site-packages\parameterized\parameterized.py", line 533, in standalone_func
-    return func(*(a + p.args), **p.kwargs)
-  File "D:\PycharmProjects\myprojectapi\test_api.py", line 44, in test_case01
-    raise AssertionError
-AssertionError
-Traceback (most recent call last):
-  File "D:\PycharmProjects\myprojectapi\test_api.py", line 40, in test_case01
-    self.assertIn(str(expect), res) #判断期望是否在接口返回信息中
-  File "C:\Users\Xuxb\AppData\Local\Programs\Python\Python39\lib\unittest\case.py", line 1098, in assertIn
-    self.fail(self._formatMessage(msg, standardMsg))
-AssertionError: "{'content': [], 'msgs': {'msg.user.nodevice.exists': '用户无设备'}, 'status': 400, 'success': False, 'totalCount': 0}" not found in "{'content': [], 'msgs': {}, 'status': 200, 'success': True, 'totalCount': 0}"
-
-During handling of the above exception, another exception occurred:
-
-Traceback (most recent call last):
-  File "D:\PycharmProjects\myprojectapi\venv\lib\site-packages\parameterized\parameterized.py", line 533, in standalone_func
-    return func(*(a + p.args), **p.kwargs)
-  File "D:\PycharmProjects\myprojectapi\test_api.py", line 44, in test_case01
-    raise AssertionError
-AssertionError
-
+pt1.1: 
 
         </pre>
     </div>
@@ -285,7 +255,7 @@ AssertionError
 </tr>
 
 <tr id='pt1.2' class='hiddenRow'>
-    <td class='none'><div class='testcase'>test_case01_1_http_192_168_1_21_justsy_rpc_msgPushByUser</div></td>
+    <td class='none'><div class='testcase'>test_case01_1_http_bjga_chinamdm_com_12019_hermes_device_updateDeviceRootAndOut</div></td>
     <td colspan='5' align='center'>
 
     <!--css div popup start-->
@@ -308,52 +278,22 @@ pt1.2:
     </td>
 </tr>
 
-<tr id='ft1.3' class='none'>
-    <td class='failCase'><div class='testcase'>test_case01_2_http_192_168_1_6_31046_hermes_device_loginTerminalInfo_identifier_</div></td>
+<tr id='pt1.3' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_case01_2_http_bjga_chinamdm_com_12019_hermes_device_updateDeviceRootAndOut</div></td>
     <td colspan='5' align='center'>
 
     <!--css div popup start-->
-    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft1.3')" >
-        fail</a>
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.3')" >
+        pass</a>
 
-    <div id='div_ft1.3' class="popup_window">
+    <div id='div_pt1.3' class="popup_window">
         <div style='text-align: right; color:red;cursor:pointer'>
-        <a onfocus='this.blur();' onclick="document.getElementById('div_ft1.3').style.display = 'none' " >
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt1.3').style.display = 'none' " >
            [x]</a>
         </div>
         <pre>
         
-ft1.3: Traceback (most recent call last):
-  File "D:\PycharmProjects\myprojectapi\test_api.py", line 40, in test_case01
-    self.assertIn(str(expect), res) #判断期望是否在接口返回信息中
-  File "C:\Users\Xuxb\AppData\Local\Programs\Python\Python39\lib\unittest\case.py", line 1098, in assertIn
-    self.fail(self._formatMessage(msg, standardMsg))
-AssertionError: "{'content': {'bridges': [], 'departName': 'xxb', 'deviceId': 78196, 'endTime': '23:00', 'isPublic': 'Y', 'issueBody': 'xxb', 'repeatType': '1', 'startTime': '00:00', 'terminalName': '康佳K5', 'terminalType': '康佳K5', 'usageType': '0'}, 'msgs': '', 'status': 200}" not found in "{'content': '', 'msgs': [{'args': '', 'code': 'E.LOGIN.TERMINAL.NOT.EXISTS'}], 'status': 400}"
-
-During handling of the above exception, another exception occurred:
-
-Traceback (most recent call last):
-  File "D:\PycharmProjects\myprojectapi\venv\lib\site-packages\parameterized\parameterized.py", line 533, in standalone_func
-    return func(*(a + p.args), **p.kwargs)
-  File "D:\PycharmProjects\myprojectapi\test_api.py", line 44, in test_case01
-    raise AssertionError
-AssertionError
-Traceback (most recent call last):
-  File "D:\PycharmProjects\myprojectapi\test_api.py", line 40, in test_case01
-    self.assertIn(str(expect), res) #判断期望是否在接口返回信息中
-  File "C:\Users\Xuxb\AppData\Local\Programs\Python\Python39\lib\unittest\case.py", line 1098, in assertIn
-    self.fail(self._formatMessage(msg, standardMsg))
-AssertionError: "{'content': {'bridges': [], 'departName': 'xxb', 'deviceId': 78196, 'endTime': '23:00', 'isPublic': 'Y', 'issueBody': 'xxb', 'repeatType': '1', 'startTime': '00:00', 'terminalName': '康佳K5', 'terminalType': '康佳K5', 'usageType': '0'}, 'msgs': '', 'status': 200}" not found in "{'content': '', 'msgs': [{'args': '', 'code': 'E.LOGIN.TERMINAL.NOT.EXISTS'}], 'status': 400}"
-
-During handling of the above exception, another exception occurred:
-
-Traceback (most recent call last):
-  File "D:\PycharmProjects\myprojectapi\venv\lib\site-packages\parameterized\parameterized.py", line 533, in standalone_func
-    return func(*(a + p.args), **p.kwargs)
-  File "D:\PycharmProjects\myprojectapi\test_api.py", line 44, in test_case01
-    raise AssertionError
-AssertionError
-
+pt1.3: 
 
         </pre>
     </div>
@@ -362,52 +302,70 @@ AssertionError
     </td>
 </tr>
 
-<tr id='ft1.4' class='none'>
-    <td class='failCase'><div class='testcase'>test_case01_3_http_192_168_1_27_12753_hermes_device_getNetworkConfig_identifier_</div></td>
+<tr id='pt1.4' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_case01_3_http_bjga_chinamdm_com_12019_hermes_device_updateDeviceRootAndOut</div></td>
     <td colspan='5' align='center'>
 
     <!--css div popup start-->
-    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft1.4')" >
-        fail</a>
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.4')" >
+        pass</a>
 
-    <div id='div_ft1.4' class="popup_window">
+    <div id='div_pt1.4' class="popup_window">
         <div style='text-align: right; color:red;cursor:pointer'>
-        <a onfocus='this.blur();' onclick="document.getElementById('div_ft1.4').style.display = 'none' " >
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt1.4').style.display = 'none' " >
            [x]</a>
         </div>
         <pre>
         
-ft1.4: Traceback (most recent call last):
-  File "D:\PycharmProjects\myprojectapi\test_api.py", line 40, in test_case01
-    self.assertIn(str(expect), res) #判断期望是否在接口返回信息中
-  File "C:\Users\Xuxb\AppData\Local\Programs\Python\Python39\lib\unittest\case.py", line 1098, in assertIn
-    self.fail(self._formatMessage(msg, standardMsg))
-AssertionError: 'E.NETWORK.CONFIG.DEPARTPATH.NOTEXIST' not found in "{'content': '', 'msgs': [{'args': '', 'code': 'E.NETWORK.CONFIG.DEVICE.NOTEXIST'}], 'status': 400}"
+pt1.4: 
 
-During handling of the above exception, another exception occurred:
+        </pre>
+    </div>
+    <!--css div popup end-->
 
-Traceback (most recent call last):
-  File "D:\PycharmProjects\myprojectapi\venv\lib\site-packages\parameterized\parameterized.py", line 533, in standalone_func
-    return func(*(a + p.args), **p.kwargs)
-  File "D:\PycharmProjects\myprojectapi\test_api.py", line 44, in test_case01
-    raise AssertionError
-AssertionError
-Traceback (most recent call last):
-  File "D:\PycharmProjects\myprojectapi\test_api.py", line 40, in test_case01
-    self.assertIn(str(expect), res) #判断期望是否在接口返回信息中
-  File "C:\Users\Xuxb\AppData\Local\Programs\Python\Python39\lib\unittest\case.py", line 1098, in assertIn
-    self.fail(self._formatMessage(msg, standardMsg))
-AssertionError: 'E.NETWORK.CONFIG.DEPARTPATH.NOTEXIST' not found in "{'content': '', 'msgs': [{'args': '', 'code': 'E.NETWORK.CONFIG.DEVICE.NOTEXIST'}], 'status': 400}"
+    </td>
+</tr>
 
-During handling of the above exception, another exception occurred:
+<tr id='pt1.5' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_case01_4_http_bjga_chinamdm_com_12019_hermes_device_updateDeviceRootAndOut</div></td>
+    <td colspan='5' align='center'>
 
-Traceback (most recent call last):
-  File "D:\PycharmProjects\myprojectapi\venv\lib\site-packages\parameterized\parameterized.py", line 533, in standalone_func
-    return func(*(a + p.args), **p.kwargs)
-  File "D:\PycharmProjects\myprojectapi\test_api.py", line 44, in test_case01
-    raise AssertionError
-AssertionError
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.5')" >
+        pass</a>
 
+    <div id='div_pt1.5' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt1.5').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt1.5: 
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt1.6' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_case01_5_http_bjga_chinamdm_com_12019_hermes_device_updateDeviceRootAndOut</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.6')" >
+        pass</a>
+
+    <div id='div_pt1.6' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt1.6').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt1.6: 
 
         </pre>
     </div>
@@ -418,9 +376,9 @@ AssertionError
 
 <tr id='total_row'>
     <td>Total</td>
-    <td>4</td>
-    <td>1</td>
-    <td>3</td>
+    <td>6</td>
+    <td>6</td>
+    <td>0</td>
     <td>0</td>
     <td>&nbsp;</td>
 </tr>

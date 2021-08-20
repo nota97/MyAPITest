@@ -34,7 +34,7 @@ class TestAPIfunc(unittest.TestCase):
         # data = eval(data)
         r = APIRequest().GetRequests(url, method, headers, data)
         # r = APIRequest().GetRequests(self.url, self.method, self.headers, self.data)
-        r = json.loads(r)
+        # r = json.loads(r)
         res = str(r)
         try:
             self.assertIn(str(expect), res) #判断期望是否在接口返回信息中
@@ -42,7 +42,8 @@ class TestAPIfunc(unittest.TestCase):
         except AssertionError as e:
             resultdata.append(res)
             raise AssertionError
-
+        finally:
+            print(resultdata)
         # self.assertEqual(r["status"], 200)
         # print(resultdata)
         # self.assertIn(str(expect), res)
