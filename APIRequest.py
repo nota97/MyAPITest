@@ -10,11 +10,11 @@ class APIRequest():
             if (type(body) is not dict):
                 res = requests.post(url=url,
                                     data=eval(body),
-                                    headers=eval(headers)).json()
+                                    headers=eval(headers),verify=False).json()
             else:
                 res = requests.post(url=url,
                                     data=body,
-                                    headers=headers).json()
+                                    headers=headers,verify=False).json()
         except Exception as e:
             res = {'error': '接口无法连接'}
             raise Exception("error：接口无法连接")
@@ -27,9 +27,9 @@ class APIRequest():
         r = None
         try:
             if(type(body) is not dict):
-                res = requests.get(url=url, params=eval(body)).json()
+                res = requests.get(url=url, params=eval(body),verify=False).json()
             else:
-                res = requests.get(url=url, params=body).json()
+                res = requests.get(url=url, params=body,verify=False).json()
         except Exception as e:
             res = {'error': '接口无法连接'}
             raise Exception("error:接口无法连接")
@@ -48,9 +48,8 @@ class APIRequest():
         return result
 
 if __name__ == '__main__':
-    # lst=readExcel().getExcelcase("APItestcase.xlsx", "Sheet1")
-    # for i in lst:
-    #     result=APIRequest().GetRequests(i[0],i[1],i[2],i[3])
-    #     print(result)
-    r=APIRequest().GetRequests("http://bjga.chinamdm.com:12022//hermes/device/updateDeviceRootAndOut","post","{'Content-Type':'application/json'}","{'identifier':'14595bab68b4fd67663fdc6d4288d59d_1','recordNum':'1a啊/*-+~！@#￥%……&*（）——+·【】{}|、\?》《<>,.'}")
+    r=APIRequest().GetRequests("https://192.168.1.23:12313/neeting/push/data/18372023720",
+                               "get",
+                               "",
+                               "{'neetingId':'1234567890'}")
     print(json.loads(r))

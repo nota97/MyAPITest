@@ -27,14 +27,7 @@ class TestAPIfunc(unittest.TestCase):
 
     @parameterized.parameterized.expand(api_list)
     def test_case01(self,url, method, headers, data, expect):
-        # res=requests.post(url='http://192.168.1.21/justsy/rpc/msgPushByUser',data={'userNames':'yiying.zh','content':'hhhhh'},
-        #                   headers={'Content-Type':'application/x-www-form-urlencoded'}).json()
-        # r = json.dumps(res, ensure_ascii=False, sort_keys=True, indent=2)
-        # r = json.loads(r)
-        # data = eval(data)
         r = APIRequest().GetRequests(url, method, headers, data)
-        # r = APIRequest().GetRequests(self.url, self.method, self.headers, self.data)
-        # r = json.loads(r)
         res = str(r)
         try:
             self.assertIn(str(expect), res) #判断期望是否在接口返回信息中
@@ -44,9 +37,7 @@ class TestAPIfunc(unittest.TestCase):
             raise AssertionError
         finally:
             print(resultdata)
-        # self.assertEqual(r["status"], 200)
-        # print(resultdata)
-        # self.assertIn(str(expect), res)
+
 
 if __name__ == '__main__':
     unittest.main(verbosity=2)
