@@ -41,3 +41,31 @@ for i in range(1, 2):
             f.write(json.dumps(items, ensure_ascii=False) + '\n')
 
 
+# import requests
+# from lxml import etree
+
+# headers = {
+#     "User-Agent": "Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3626.119 Safari/537.36"}
+
+# url="https://movie.douban.com/chart"
+
+# response=requests.get(url,headers=headers)
+# html=response.content.decode()
+# element = etree.HTML(html)
+# lst=element.xpath('//tr[@class="item"]')
+# for i in lst:
+#     name=i.xpath('td/div/a/text()')[0]
+#     name=name.replace(" ","")
+#     name=name.replace("\n","")
+#     name=name.replace("/","")
+#     print(name)
+
+#     url=i.xpath('td/div/a/@href')[0]
+#     print(url)
+#     img=i.xpath('td/a/img/@src')[0]
+#     print(img)
+#     rating=i.xpath('td/div/div/span[@class="rating_nums"]/text()')[0]
+#     print(rating)
+#     pl=i.xpath('td/div/div/span[@class="pl"]/text()')[0]
+#     print(pl)
+
