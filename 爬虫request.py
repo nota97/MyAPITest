@@ -68,4 +68,4 @@ for i in range(1, 2):
 #     print(rating)
 #     pl=i.xpath('td/div/div/span[@class="pl"]/text()')[0]
 #     print(pl)
-
+# data_dict={i.split("=")[0]:i.split("=")[1] for i in Cookie.split(";")}
