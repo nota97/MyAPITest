@@ -69,3 +69,30 @@ for i in range(1, 2):
 #     pl=i.xpath('td/div/div/span[@class="pl"]/text()')[0]
 #     print(pl)
 # data_dict={i.split("=")[0]:i.split("=")[1] for i in Cookie.split(";")}
+
+
+# from random import sample,shuffle
+# def RandomGroup(lst):
+#     group = {'Group1':[],'Group2':[],'Group3':[],'Group4':[],'Group5':[]}
+#     a = lst[0:28]
+#     b = lst[28:32]
+#     shuffle(a)
+#     b.append(a[0])
+#     shuffle(b)
+#     for i in group:
+#         group[i].append(b[0])
+#         b.pop(0)
+#     a.pop(0)
+#     for i in group:
+#         ans=sample(a,5)
+#         for j in ans:
+#             group[i].append(j)
+#             a.pop(a.index(j))
+#     group['Group1'].append(a[0])
+#     group['Group2'].append(a[1])   
+#     return group
+
+
+# lst=[i+1 for i in range(32)]
+# print(RandomGroup(lst))
+
